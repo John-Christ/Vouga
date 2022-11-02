@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+
+          <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+  <head>
+
+<?!= include('JavaScript'); ?>
+<?!= include('Script'); ?>
+<?!= include('Style'); ?>
+    <base target="_blank">
+   
+
+  <style>
+
+/*page1*/
+.page1_class1-off{
+    display: none;
+  }
+
+
+/*page2*/
+.page2_class1{
+    display: none;
+  }
+
+.page2_id1-off{
+    display:none;
+}
+
+/*page3*/
+.page3_class1{
+    display:none;
+
+}
+.page3_id1-off{
+    display:none;
+}
+
+/*page4*/
+.page4_class1{
+    display:none;
+
+}
+.page4_id1-off{
+    display:none;
+}
+
+input[type=text]:hover{
+        border-bottom:2px solid black;
+      }
+input[type=number]:hover{
+        border-bottom:2px solid black;
+      }
+input[type=password]:hover{
+        border-bottom:2px solid black;
+      }
+
+.user{
+display: inline-block;
+width: 75px;
+height: 75px;
+border: 8px solid black;
+border-radius: 50%;
+position: relative;
+overflow: hidden;
+box-sizing: border-box;
+}
+
+/*the head/*/
+.user::before{
+content: '';
+display: inline-block;
+width: 24px;
+height: 24px;
+background: black;
+border-radius: 50%;
+position: absolute;
+left: calc(50% - 11px);
+top: 10px;
+}
+
+/*the body*/
+.user::after{
+content: '';
+display: inline-block;
+width:50px;
+height:40px;
+background: black;
+border-radius: 50%;
+position: absolute;
+left: calc(50% - 24px);
+top: 39px;
+}
+
+ 
+    #inter1 {
+        display: block;
+        width: 100%;
+         height: 100px;
+        margin-top: 0%;
+      //  background-color: #ff8c00;
+      
+      }
+    
+      #logo {
+            width:60px;
+            height:60px;
+            animation-name: log;
+           animation-duration: 3s;
+           animation-iteration-count: infinite;
+                   
+      }
+      
+      @keyframes log {
+  0%   {  width:60px;}
+  25%  {  width:80px;}
+  50%  {  width:60px;}
+  75%  { width:80px;}
+  100% { width:60px;}
+
+      }  
+
+
+
+
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body onload="myFunction()" style="margin:0; box-shadow: 7px 3px 15px 10px grey;">
+   
+
+   <center>
+    
+    <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" id="loader" >
+     
+   </center>
+
+   <div  style="display:none;" id="myDiv" class="animate-bottom">
+
+
+     <div id=inter1 style="background-image: url('https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png');" >
+      <center>
+    <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" id="logo">
+      </center>
+     </div>
+
+   <div style="box-shadow: 7px 3px 15px 10px grey;">
+
+<!--page1-->
+<center>
+ <div class="page1_class1" id="page1_id1" style="border-radius:30px;  background:none; width: 100%; height: 700px; padding-top: 5px;padding-bottom: 10px;"> 
+
+<br><br>
+
+    <h1 style="color:black; font-style: italic; font-size:40px;">Welcome</h1>
+   
+    <br>
+
+
+  <p>  <b style="font-style: italic;">Please<br>
+Enter the phone number for this transaction. <br>
+The driver can contact you. </b> </p> <br><br>
+
+  <input type="tel" id="phone" placeholder="061100XXXX"  style="border-top: none; border-right: none; border-left: none; outline: none; text-align: center;font-size:30px ;width: 100%;font-weight:bold;font-style: italic;" />
+
+    <br><br><span id="errorMessage" style="color: red; font-style: italic;" ></span>
+    
+    <br><br>
+    <input type="submit" value="Continue" id="btn" onClick="LoginUser()"/><br>
+    <br><br>
+    <b style="font-style: italic;">Not registered yet? Do it right below!</b><br><br>
+    <input type="button"  onClick="function1()" value="REGISTER" style="border-radius:20px; font-weight:bold; background-color:limegreen; color: white; width:150px; height:50px; box-shadow: 2px 2px #888888;" />
+ </div>
+
+<!--page2-->
+<div class="page2_class1" id="page2_id1" style="background:none; width: 100%; height: 700px; padding-top: 5px;padding-bottom: 10px; ">
+  <br>
+  <h1 style="color:white; font-style: italic; font-size:40px;">Create Account</h1><br><br>
+ <p> <b style="color: white;font-style: italic;">Please<br>Enter your phone number like this 27611002233.<br> NOT like this 27 0611002233 </b></p><br><br>
+
+  <input type="tel" id="tel" placeholder="27611002233"  style="border-top: none; border-right: none; border-left: none; outline: none; text-align: center;font-size:30px ;width: 100%;font-weight:bold;font-style: italic;" /><br><br><br>
+
+ 
+    <input type="text" id="usernamee" placeholder="Name"  style="border-top: none;border-right: none;border-left: none;outline: none; text-align: center;font-size:30px ;width: 100%;font-weight:bold;font-style: italic;"/><br>
+    <br><br>
+
+
+        <br>
+    <input type="email" name="emaill" id="emaill" placeholder="Email"  style="border-top: none;border-right: none;border-left: none;outline: none; text-align: center;font-size:30px ;width: 100%;font-weight:bold;font-style: italic;" required /><br><br>
+    <br>
+
+
+
+    <output id="time" name="time"></output>
+
+
+<script>
+const c = new Date();
+document.getElementById("time").innerHTML = c;
+document.getElementById("time").style.display = "none";
+</script>
+    
+   
+    <input type="submit" id="btn" value="Create" onclick="AddRow()" />
+    <br><br><br>
+     <input type="button"  onClick="function4()" value="Back to Login" style="border-radius:20px; font-weight:bold; background-color:limegreen; color: white; width:150px; height:50px; box-shadow: 2px 2px #888888;" />
+</div>
+
+<!--page3-->
+ <div class="page3_class1" id="page3_id1" style="background:none;width: 50%; height: 700px; padding-top: 10px;padding-bottom: 20px;"><center>
+   <br><br>
+
+    <h2 style="font-style: italic; font-size:30px;" > Your account has been successfully created. Login to your account</h2>
+    <input type="submit" id="btn" onClick="function3()" value="Login"><br>
+ </div> 
+
+<!--page4-->
+<div class="page4_class1" id="page4_id1" style="width: 100%;" >
+
+
+ 
+   
+
+    <script>
+ 
+
+
+
+    </script>
+
+    <style>
+
+      
+
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: "Roboto", "sans-serif";
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+#floating-panel {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -180px;
+  width: 350px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+#latlng {
+  width: 225px;
+}
+    </style>
+
+<br>
+ 
+   <!-- the below div can hide map1 geolocation: display:none; -->
+  <div style=" width:100%; display:none;">
+    
+    <button style="margin-left: 10px;" onclick="getLocation()">Find Your Location</button>
+    <br>
+    <h5 style="margin-left: 10px;">click the button above.Then copy and paste your location details generated<br>
+    into the input next to get the address.</h5><br>
+
+<output style="margin-left: 10px; display: block; background-color:lightyellow;"  id="demo"></output><br><br>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>
+
+
+    
+
+      <input id="latlng" type="text" placeholder="Paste here eg. -25.731340, 28.218370 " />
+      <input id="submit" type="button" value="Get your address" />
+      <output id="addr"></output>
+    <br><br>
+    <div id="map1" ></div>
+    
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6LUgd0sqxV0veDhuTcUJUXyZQJE3pTqE&callback=initMap&v=weekly"async></script>
+    </script>
+
+  
+  </div>
+  
+  
+
+    <output id="id" name="id"></output>
+   <output id="status" name="status" style="display:none;">In Process</output> 
+    
+    <div style="display: none" >
+      <input
+        id="origin"
+        name="origin"
+        class="controls"
+        type="text"
+        placeholder="From"
+      />
+
+    
+    
+      <input
+        id="destination"
+        name="destination"
+        class="controls"
+        type="text"
+        placeholder="To"
+      />
+     <br>
+   <!--   <div id="mode-selector" class="controls">
+        <input
+          type="radio"
+          name="type"
+          id="changemode-walking"
+          checked="checked"
+        />
+        <label for="changemode-walking">Walking</label>
+        <input type="radio" name="type" id="changemode-transit" />
+        <label for="changemode-transit">Transit</label> -->
+
+        <input type="radio" name="type" id="changemode-driving" style="display: none"/>
+        <label for="changemode-driving" style="display: none" >Driving</label>
+    </div>
+
+    <div id="map"  onclick="mapst1()" style="width: 100%; height:400px; border-radius: 4%; box-shadow: 4px 4px 9px 12px lightblue;  border-top: 16px solid lightblue; border-right: 16px;         border-bottom: 16px solid lightblue;
+  border-left: 16px;"></div>
+      <output id="temps" name="temps"></output>
+      <div id="msg"></div>
+  
+    <br>
+     <h4 id="much" onclick="mapst()"   style=" text-align: center; font-size:30px ; font-weight:bold; font-style: italic;" >How much you have for the Trip?</h4>
+     <input id="price"   onclick="mapst()" type="number" placeholder="R0" style="border-top: none; border-right: none; border-left: none; outline: none; text-align: center;font-size:30px ;width: 100%;font-weight:bold;font-style: italic;" />
+     
+
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6LUgd0sqxV0veDhuTcUJUXyZQJE3pTqE&callback=initMap&libraries=places&v=weekly" 
+            async
+            ></script>
+    
+    
+    <div id= "inter">
+
+  <output id="contact" name="contact" style="display:none;" ></output>
+          <br>
+  <output id="driver" name="driver"  style="display:none;">Loading...</output> 
+  <output id="date" name="date"></output>
+
+
+<script>
+const d = new Date();
+document.getElementById("date").innerHTML = d;
+document.getElementById("date").style.display = "none";
+</script>
+
+
+<script>
+const z = new Date().getTime().toString();
+document.getElementById("id").innerHTML = z;
+document.getElementById("id").style.display = "none";
+</script>
+
+        <center>
+         
+
+   <!--   <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button> -->
+      <br>
+      <div id="more" style="display:none; width:100%" onclick="myOpt()"><br>
+
+       <span style="float:left;">Back</span>
+
+       <div style="float:right; margin-right:3px ">        
+    <!--<a href="#about">Profile</a><br><br>-->
+    <a href="https://script.google.com/macros/s/AKfycbyiWV1YeZowV4woAyZ4yIqalSpfDDA14dOkRaSRrSXaUkSIqBjr4vzXtllMWbLWYI2e/exec">Become a Driver</a><br><br>
+    <a href="https://boyoquiz.com/BoyoLifestyle-Business.html">Developer</a>
+       </div>
+
+       </div>
+
+      <script>
+        function myBtn(){
+          document.getElementById("req").style.display="none";
+          document.getElementById("find").style.display="none";
+          document.getElementById("more").style.display="block"; 
+          
+        }
+
+         function myOpt(){
+          document.getElementById("more").style.display="none";
+          document.getElementById("find").style.display="block";
+          document.getElementById("req").style.display="block"; 
+
+         }
+          function mapst(){
+            document.getElementById("map").style.height="200px";
+          }
+          
+        function mapst1 (){
+            document.getElementById("map").style.height="400px";
+          }
+      </script>
+
+
+      <button id="find"  onclick="myBtn()"> <center> <span> <b> <hr>  <hr>  <b> </span> </center> </button>
+
+      <!--SUBMIT---SUBMIT -->
+
+      <button type="submit" id="req" onclick="AddTrip()"> <b> Request </b> </button>
+    </center>
+    </div>
+     
+    
+
+
+    <div id="active" style="display:none; width:100%; padding-top:10px; border-radius:10px;">
+      <center>
+        <p>Please, do not exit the app, you may loose your transaction.</p>
+        <p>Press the button UPDATE, every 10 secondes to find a driver available.</p>
+        <p>A driver will automatically CALL you after accepting your offer.</p><br>
+        <p>If your driver took long to show up... </p>
+        Please, Whatsapp, Call or SMS Vouga using this number(+27) 0611514659. </p>
+        <p>An agent will help you to find an available driver.</p>
+        
+
+        <br>
+     <?!= include('Table'); ?>
+
+  
+  
+      </center>
+    </div>
+
+</div>
+
+
+
+
+
+
+    
+    
+   
+
+
+
+     
+  </div>
+
+</center>
+     </div>
+    
+    <br><br>
+     <center>
+       <p style="font-size: 12px; margin-bottom: 20px; color: white; height:20px "class="w3-container w3-center w3-animate-left" > <b> Powered by Boyo Lifestyle <b> </p>
+     </center>
+
+     <script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+  </body>
+</html>
