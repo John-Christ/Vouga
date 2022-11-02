@@ -1,0 +1,252 @@
+<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+      
+      /*my interface*/
+      
+       #inter1 {
+        display: block;
+        width: 100%;
+         height: 10px;
+        margin-top: 0%;
+      //   background-color: #ff8c00;
+
+      
+      }
+      
+      #inter {
+        display: block;
+        width: 100%;
+         height: 300px;
+      //  background-color: #ff8c00;
+      
+      }
+      
+      
+      
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+ height: 100%; /* Make this site really long */
+  width: 100%; /* Make this site really wide */
+  overflow-x: hidden; /* Hide scrollbars */
+}
+
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 42px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#origin {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 35%;
+}
+      
+      #destination {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 35%;
+}
+
+#origin:focus,
+#destination:focus {
+  border-color: #4d90fe;
+}
+
+
+#origin:hover,
+#destination:hover {
+  width:60%;
+}
+
+
+#mode-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  margin-left: 12px;
+  padding: 5px 11px 0px 11px;
+}
+
+#mode-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+      
+      
+      #req {
+        display: block; 
+        width: 35%; 
+        background-color: #7cfc00;
+        border: 1px solid white;
+        font-size: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-family: Roboto;
+        border-radius: 10px;
+        height: 50px;
+        float:right;
+        margin-right: 10px;
+        
+}
+    
+      
+      #logo {
+            width:60px;
+            height:60px;
+            animation-name: log;
+           animation-duration: 3s;
+           animation-iteration-count: infinite;
+                   
+      }
+      
+      @keyframes log {
+  0%   {  width:60px;}
+  25%  {  width:80px;}
+  50%  {  width:60px;}
+  75%  { width:80px;}
+  100% { width:60px;}
+
+      }   
+        
+      
+      #req:hover {
+  background-color: #3e8e41;
+}
+      
+        
+      
+    #find {
+     display: block; 
+     width: 20%;
+      height: 50px;
+     float:left;
+     margin-left: 10px;
+     background-color: white;
+     border: 1px solid transparent;
+     font-size: 15px;
+     
+     
+     padding-right: 15px;
+     padding-left: 15px;  
+     font-family: Roboto;
+     border-radius: 10px;
+      }
+      
+       #find:hover {
+  background-color: #3e8e41;
+}
+
+
+   #btn {
+
+      color:white;
+      border-radius:20px; 
+      box-shadow: 2px 2px #888888; 
+      font-weight:bold; 
+      background-color:orange; 
+      width:150px; 
+      height:50px;
+   }
+      
+    #btn:hover {
+
+      background-color: #f5f5f5;
+    }
+  
+
+
+    #loader {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+   border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+      
+      
+      #loader:hover {
+        animation: spen 1s linear infinite;
+      }
+      
+      
+      @keyframes spen {
+         0% {  width: 120px; height: 120px; }
+  100% { width: 90px; height: 90px; }
+}
+
+
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+
+
+ #more {
+     display: block; 
+     width: 20%;
+      height: 150px;
+     float:left;
+     margin-left: 10px;
+     background-color: white;
+     border: 1px solid transparent;
+     font-size: 15px;
+     
+     
+     padding-right: 15px;
+     padding-left: 15px;  
+     font-family: Roboto;
+     border-radius: 10px;
+      }
+
+
+
+
+
+    
+    </style>
