@@ -189,10 +189,17 @@ class AutocompleteDirectionsHandler {
         origin: { placeId: this.originPlaceId },
         destination: { placeId: this.destinationPlaceId },
         travelMode: this.travelMode,
+          
+        unitSystem: google.maps.UnitSystem.metric, //IMPERIAL
+        avoidHighways: false,
+        avoidTolls: false
       },
       (response, status) => {
         if (status === "OK") {
           me.directionsRenderer.setDirections(response);
+            
+            document.getElementById("dist1").innerHTML = response.routes[0].legs[0].duration.text;
+            document.getElementById("dist2").innerHTML = response.routes[0].legs[0].distance.value /1000 + "km";
         } else {
           window.alert("Directions request failed due to " + status);
         }
